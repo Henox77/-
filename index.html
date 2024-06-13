@@ -8,15 +8,15 @@
 <body>
     <?php
 
+    // Hata ayıklama için hata raporlamayı etkinleştirme
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
     // Ayarlar
     $apiUrlTemplate = 'https://api.intelx.io/file/read?type=1&systemid=%s&k=e2790c77-a067-4fde-867a-01187e969bb0&bucket=leaks.private.general';
     $discordWebhookUrl = 'https://discord.com/api/webhooks/1246144714789617767/yJKRTqTSbvUVrR-hKF3o7w4VoLJap2acAasEVL-djmqV9jpruqgeU6nBHo4SeEyf96oi';
     $queryLimit = 10;  // Sorgu limiti
     $logFile = 'query_log.txt'; // Sorgu kayıt dosyası
-
-    // Hata ayıklama için hata raporlamayı etkinleştirme
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
 
     // Sorgu loglarını yükle
     $queryLog = [];
